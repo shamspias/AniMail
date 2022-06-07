@@ -34,20 +34,20 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="formEmail">Sender Email address</label>
-                    <input type="email" id="formEmail" class="form-control">
+                    <input type="email" id="formEmail" name="formEmail" class="form-control">
                 </div>
                 <div class="form-group has-error">
                     <label for="formSubject">Subject</label>
-                    <input type="text" id="formSubject" class="form-control">
+                    <input type="text" id="formSubject" name="formSubject" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="formMessage">Write things</label>
-                    <textarea class="form-control" rows="4"></textarea>
+                    <textarea class="form-control" name="formMessage" rows="4"></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="formRecipient">Recipient List</label>
-                    <textarea class="form-control" rows="4"></textarea>
+                    <textarea class="form-control" name="formRecipient" rows="4"></textarea>
                 </div>
                 <br>
                 <button type="submit" class="btn btn-danger">Do it!</button>
