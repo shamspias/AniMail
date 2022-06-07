@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Senders, EmailTemplates
 
-# Register your models here.
+admin.site.register(Senders)
+admin.site.register(EmailTemplates)
