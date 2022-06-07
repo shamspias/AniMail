@@ -19,5 +19,5 @@ from django.urls import path, re_path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path('', include('django_simple_bulk_emailer.urls')),
+    re_path('', include('mail_freak.urls')),
 ]

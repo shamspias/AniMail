@@ -17,7 +17,7 @@ class EmailTemplates(models.Model):
     Basic Email send templates
     """
     name = models.CharField(max_length=20, blank=False, null=True)
-    subject = models.TextField(black=True, null=True)
+    subject = models.TextField(blank=True, null=True)
     main_text = models.TextField(blank=True, null=True)
     senders = models.ForeignKey(Senders, blank=True, null=True, on_delete=models.CASCADE)
     

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Send Mails{% endblock %}
+
+{% block body %}
+
+<!-- navbar ex -->
+		
+
+    <!-- container ex -->
+    
+<div class="container" id="top">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-sm-8">
+            <h1>Send massiv mails to multiple peoples</h1>
+             <p>By using Animail can send multiple emails</p>
+          </div>
+      </div>
+  </div>
+        
+
+        <hr>  <!-- Form ex -->
+    
+        <div class="container">
+    
+    <div class="page-header">
+        <h1>Mail Options</h1>
+        <p class="lead">Send Mail Form</p>
+    </div><!-- page-header -->
+    
+    <div class="row">
+        <div class="col-sm-4">
+            <form action="/" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="formEmail">Sender Email address</label>
+                    <input type="email" id="formEmail" class="form-control">
+                </div>
+                <div class="form-group has-error">
+                    <label for="formSubject">Subject</label>
+                    <input type="text" id="formSubject" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="formMessage">Write things</label>
+                    <textarea class="form-control" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="formRecipient">Recipient List</label>
+                    <textarea class="form-control" rows="4"></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-danger">Do it!</button>
+            </form>
+             <br>
+            
+        </div>
+    </div><!-- row -->
+    
+    <br><br><hr>
+    
+    
+    
+</div><!-- container -->
+    
+
+{% endblock %}
