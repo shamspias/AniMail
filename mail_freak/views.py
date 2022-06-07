@@ -11,7 +11,10 @@ class SendMultipleMails(TemplateView):
 
     def post(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
-        bar = request.POST.get('formEmail', None)
-        print(bar)
+        email_sender = request.POST.get('formEmail', None)
+        subject = request.POST.get('formSubject', None)
+        main_text = request.POST.get('formMessage', None)
+        recipient_list = request.POST.get('formRecipient', None)
+        print(recipient_list)
 
         return self.render_to_response(context)
